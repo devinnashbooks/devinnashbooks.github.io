@@ -1,5 +1,7 @@
 <!--
-
+	
+	Author: Bryce Allen (https://bryceallen.dev)
+	
 	Problem: Devin's job is centered around consuming information. As a result, he reads a lot of books. Those who respect Devin
 			for his expertise want to read some of the books and articles that he's reading. Devin frequenlty makes book 
 			recommendations on-stream, during videos, and in Discord chats, however, this information is scattered in a multitude 
@@ -9,7 +11,15 @@
 			view. The links for each book are Amazon Smile links that support a charity of the user's choice.
 
 -->
-<doctype HTML>
+<!--
+
+	NOTES:
+		- If phiresky's sql.js-httpvfs code is used, then take note of the fact it won't work on browsers that don't support
+			WebAssembly and WebWorkers
+			- It will also use more RAM if fetching a lot of data.
+
+-->
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>Devin Nash Books</title>
@@ -20,5 +30,9 @@
 		<p>This page will have a series of books recommended by Devin Nash.</p>
 		
 		<p>Serves as a test page for my first web app built with a SQLite database.</p>
+		
+		<div id="content"></div>
+		
+		<script src="./dist/bundle.js"></script>
 	</body>
 </html>
